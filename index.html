@@ -39,12 +39,38 @@
             font-size: 16px;
             
         }
+        /* For screens smaller than 600px (typical phones) */
+@media only screen and (max-width: 600px) {
+    #responsive {
+        max-width: 100%;
+        max-height: 450px;
+    }
+}
+        @media only screen and (max-width: 600px) {
+    #responsive {
+        max-width: 100%;
+    }
+}
+
+/* For screens between 600px and 900px (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    #responsive {
+        max-width: 20%;
+    }
+}
+
+/* For screens larger than 900px (desktops) */
+@media only screen and (min-width: 901px) {
+    #responsive {
+        max-width: 60%;
+    }
+}
     </style>
 </head>
 <body>
     <h1 class="logo">Churuli<span>  Official</span></h1>
     <div class="thumbnail">
-        <img src="churuli commics cover.png" alt="Thumbnail" width="400" height="600">
+        <img id="responsive" src="churuli commics cover.png" alt="Thumbnail" width="400" height="600">
     </div>
 
     <a href="Churulie Commics vol 1.pdf" download class="download-btn">Download File</a>
